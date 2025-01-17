@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         Random randomGenerator = new Random();
-        int number = randomGenerator.Next(1,5);
+        int number = randomGenerator.Next(1,100);
         string userInput;
         int guess;
         
@@ -25,6 +25,6 @@ class Program
             }
 
         }while (guess != number);
-        Console.WriteLine($"You guessed it! {number}");
+        Console.WriteLine("You guessed it!");
     }
 }
