@@ -14,7 +14,7 @@ class Journal
         Console.WriteLine(prompt);
         
         Console.WriteLine("");
-        
+
         string response = Console.ReadLine();
         newEntry._response = response;
         
@@ -26,15 +26,15 @@ class Journal
     }
     public void Display()
     {
-        Console.WriteLine("Entries");
-        Console.WriteLine("========================");
+        Console.WriteLine("Entries: ");
+        Console.WriteLine("======================");
 
         foreach (Entry entry in _entries)
         {
             entry.Display();
         }
         
-        Console.WriteLine("========================");
+        Console.WriteLine("======================");
     }
     public void Save()
     {
