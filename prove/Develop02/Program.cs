@@ -10,9 +10,10 @@ class Program
         Menu menu = new Menu();
         Journal journal = new Journal();
         
+        
         bool done = false;
-        while (!done)
-        {
+        do{
+            Console.WriteLine("");
             menu.Display();
             int choiceInt = choice.GetChoice();
 
@@ -28,12 +29,11 @@ class Program
             } else if (choiceInt == 4)
             {
                 journal.Save();
-            }
-            else
+            } else if (choiceInt == 5)
             {
-                //done = true;
+                done = true;
             }
-        }
+        }while (!done);
 
        
     }

@@ -13,6 +13,7 @@ class Journal
         newEntry._prompt = prompt;
         Console.WriteLine(prompt);
         
+        Console.WriteLine("");
         
         string response = Console.ReadLine();
         newEntry._response = response;
