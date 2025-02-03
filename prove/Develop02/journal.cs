@@ -3,13 +3,17 @@ using System.IO;
 class Journal
 {
     List <Entry> _entries = new List<Entry>();
+    
     public void AddEntry()
     {
         Entry newEntry = new Entry();
         PromptGenerator randomPrompt = new PromptGenerator();
        
-        string prompt = randomPrompt.GetRandomPrompt();
+        Console.Write("What is your name? ");
+        string name = Console.ReadLine();
+        newEntry._name = name;
 
+        string prompt = randomPrompt.GetRandomPrompt();
         newEntry._prompt = prompt;
         Console.WriteLine(prompt);
         
@@ -24,6 +28,7 @@ class Journal
 
         _entries.Add(newEntry);
     }
+    
     public void Display()
     {
         Console.WriteLine("Entries: ");
@@ -32,31 +37,31 @@ class Journal
         foreach (Entry entry in _entries)
         {
             entry.Display();
+            Console.WriteLine("");
         }
         
         Console.WriteLine("======================");
     }
+    
     public void Save()
     {
-        Entry newEntry = new Entry();
         Console.Write("What is the file name? ");
-        
         string fileName = Console.ReadLine();
         
         using (StreamWriter outputFile = new StreamWriter(fileName))
         {
             foreach (Entry entry in _entries)
             {
-                string storedEntry = $"Date: {entry._date} - Prompt: {entry._prompt} \n{entry._response}";
-                outputFile.WriteLine(storedEntry);        
+                string storedEntry = $"Name: {entry._name} \nDate: {entry._date} - Prompt: {entry._prompt} \n{entry._response}";
+                outputFile.WriteLine(storedEntry);
+                outputFile.WriteLine("");        
             }
         }
     }
 
     public void Load()
     {
-        Console.Write("What is the file name? ");
-        
+        Console.Write("What is the file name? \n");
         string fileName = Console.ReadLine();
         string[] lines =  System.IO.File.ReadAllLines(fileName);
         
@@ -69,9 +74,5 @@ class Journal
             Console.WriteLine(part);
             }
         }
-
-
     }
-
-
 }

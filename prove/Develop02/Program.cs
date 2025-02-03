@@ -10,7 +10,6 @@ class Program
         Menu menu = new Menu();
         Journal journal = new Journal();
         
-        
         bool done = false;
         do{
             Console.WriteLine("");
@@ -34,7 +33,5 @@ class Program
                 done = true;
             }
         }while (!done);
-
-       
     }
 }

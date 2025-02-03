@@ -1,6 +1,6 @@
 class Choice
 {
-    // methods
+    
     public int GetChoice()
     {
         Console.Write("Enter choice: ");
