@@ -21,7 +21,7 @@ public void DisplayAnimation()
 {
     List<string> _animationStrings = new List<string>(){"—", "|", "\\", "/", "—", "|", "\\", "/" };
     DateTime _startTime = DateTime.Now;
-    DateTime _endTime = _startTime.AddSeconds(3);
+    DateTime _endTime = _startTime.AddSeconds(5);
     int i = 0;
     while (DateTime.Now < _endTime)
     {

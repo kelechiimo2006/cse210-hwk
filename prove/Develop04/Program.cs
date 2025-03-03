@@ -33,6 +33,7 @@ class Program
                         Console.Clear();
                         break;
                     }
+                    
                     case 2:
                     {
                         Console.Clear();
@@ -49,6 +50,7 @@ class Program
                         Console.Clear();
                         break;
                     }
+                    
                     case 3:
                     {
                         Console.Clear();
