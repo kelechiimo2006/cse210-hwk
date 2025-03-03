@@ -4,6 +4,16 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop03 World!");
+        Word word = new Word();
+        string text = word.HideWord();
+        Console.Write("Enter: ");
+        string input = Console.ReadLine();
+
+        while (input != "quit")
+        {
+            Console.WriteLine(text);
+            Console.ReadLine();
+            Console.Clear();
+        }
     }
 }

@@ -1,5 +1,10 @@
-class ReflectionActivity : Activity
+public class ReflectionActivity : Activity
 {
+    public  ReflectionActivity(string name, string description) : base (name, description)
+    {
+
+    }
+
     private List<string> _prompts = new List<string>()
     {
         "Think of a time when you stood up for someone else.",
@@ -19,14 +24,37 @@ class ReflectionActivity : Activity
         "What did you learn about yourself through this experience?",
         "How can you keep this experience in mind in the future?"
     };
-public void Dispt()
+public void RunActivity()
 {
+    Console.WriteLine("Consider the following prompt:\n");
+    
     Random randomGenerator = new Random ();
     int _promptIndex = randomGenerator.Next(_prompts.Count);
-    int _questionsIndex = randomGenerator.Next(_questions.Count);
-    Console.WriteLine(_prompts[_promptIndex]);
+    Console.WriteLine($"--- {_prompts[_promptIndex]} ---\n");
+    
+    Console.WriteLine("When you have something in mind, press Enter to continue");
+    Console.ReadLine();
+    Console.WriteLine("");
 
-    Console.WriteLine(_questions[_questionsIndex]);
+    Console.WriteLine("Now, ponder on each of the following questions as they are relate to this experience.");
 
+    Console.Write("You may begin in: ");
+    DisplayCountdown();
+    
+    Console.Clear();
+
+    DateTime _startTime = DateTime.Now;
+    DateTime _endTime = _startTime.AddSeconds(GetDuration());
+        while (DateTime.Now < _endTime)
+        {
+            int _questionsIndex = randomGenerator.Next(_questions.Count);
+            Console.Write($"> {_questions[_questionsIndex]} ");
+            DisplayAnimation();
+            Console.WriteLine("");
+            _questions.RemoveAt(_questionsIndex);
+
+        }
+    
+    
 }
 }

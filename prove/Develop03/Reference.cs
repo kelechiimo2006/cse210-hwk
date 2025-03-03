@@ -1,6 +1,5 @@
 class Reference
-{   private string _book;
-    private int _chapter;
-    private int _verse;
-    private int _endVerse;
+{
+    private List<string> _words = new List<string>()
+    {"Trust in the Lord with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths."};
 }
