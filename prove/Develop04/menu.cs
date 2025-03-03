@@ -3,6 +3,7 @@ class Menu
 {
     public void Display()
     {
+        Console.Clear();
         Console.WriteLine("Please select one of the following options: ");
         Console.WriteLine("1) Breathing Activity");
         Console.WriteLine("2) Reflection Activity");

@@ -61,7 +61,7 @@ class Program
                         l1.DisplayAnimation();
                         l1.RunActivity();
                         l1.DisplayWellDone();
-                        l1.EndActivity("Breathing Activity");
+                        l1.EndActivity("Listing Activity");
                         l1.DisplayAnimation();
                         Console.Clear();
                         
