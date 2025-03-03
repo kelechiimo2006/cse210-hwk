@@ -14,6 +14,7 @@ class BreathingActivity : Activity
     {
         DateTime _startTime = DateTime.Now;
         DateTime _endTime = _startTime.AddSeconds(GetDuration());
+        
         while (DateTime.Now < _endTime)
         {
             Console.Write(_prompts[0]);

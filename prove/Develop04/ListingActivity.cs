@@ -30,6 +30,7 @@ public class ListingActivity : Activity
         string userInput = "";
         DateTime _startTime = DateTime.Now;
         DateTime _endTime = _startTime.AddSeconds(GetDuration());
+        
         while ((DateTime.Now < _endTime) && (userInput != "\n"))
         {
             Console.Write("> ");

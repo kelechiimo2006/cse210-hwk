@@ -45,15 +45,16 @@ public void RunActivity()
 
     DateTime _startTime = DateTime.Now;
     DateTime _endTime = _startTime.AddSeconds(GetDuration());
-        while (DateTime.Now < _endTime)
-        {
-            int _questionsIndex = randomGenerator.Next(_questions.Count);
-            Console.Write($"> {_questions[_questionsIndex]} ");
-            DisplayAnimation();
-            Console.WriteLine("");
-            _questions.RemoveAt(_questionsIndex);
+        
+    while (DateTime.Now < _endTime)
+    {
+        int _questionsIndex = randomGenerator.Next(_questions.Count);
+        Console.Write($"> {_questions[_questionsIndex]} ");
+        DisplayAnimation();
+        Console.WriteLine("");
+        _questions.RemoveAt(_questionsIndex);
 
-        }
+    }
     
     
 }
