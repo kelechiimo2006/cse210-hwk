@@ -39,9 +39,9 @@ public void DisplayAnimation()
     }
     
 }
-public void DisplayCountdown()
+public void DisplayCountdown(int value = 5)
 {
-    for (int i = 5; i > 0; i--)
+    for (int i = value; i > 0; i--)
     {
         Console.Write(i);
         Thread.Sleep(500);
