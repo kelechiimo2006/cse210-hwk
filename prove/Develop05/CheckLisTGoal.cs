@@ -1,7 +1,7 @@
 public class ChecklistGoal : Goal
 {
     private int _bonusPoints;
-    
+    private int _timesCompleted;
     private int _totalTimes;
     public ChecklistGoal(string name, string description, int points, int totalTimes, int bonusPoints) : base(name, description, points)
     {
@@ -14,6 +14,10 @@ public class ChecklistGoal : Goal
         throw new NotImplementedException();
     }
     public override void isCompleted()
+    {
+        throw new NotImplementedException();
+    }
+    public override void SetCompleted()
     {
         throw new NotImplementedException();
     }

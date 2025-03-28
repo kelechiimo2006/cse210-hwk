@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using System.Linq.Expressions;
 using System.Runtime.Intrinsics.Arm;
 
@@ -85,6 +86,8 @@ class Program
                             no++;
                             Console.WriteLine($"{no}. {g.GetName()}");
                         }
+                        Console.Write("Which goal did you accomplish? ");
+                        
                         break;
                     }
                 }

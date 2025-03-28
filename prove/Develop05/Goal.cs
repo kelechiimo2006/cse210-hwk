@@ -21,5 +21,8 @@ public abstract class Goal
     {
         return _name;
     }
+    public abstract void SetCompleted();
+
+    
     
 }
