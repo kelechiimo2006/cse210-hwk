@@ -87,6 +87,10 @@ class Program
                             Console.WriteLine($"{no}. {g.GetName()}");
                         }
                         Console.Write("Which goal did you accomplish? ");
+                        string gChoice = Console.ReadLine();
+                       
+                    
+
                         
                         break;
                     }

@@ -13,4 +13,8 @@ public class EternalGoal : Goal
     {
         throw new NotImplementedException();
     }
+    public override void SetCompleted()
+    {
+        throw new NotImplementedException();
+    }
 }
